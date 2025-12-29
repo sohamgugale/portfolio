@@ -3,380 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Gugale | Computational Engineer</title>
+    <title>Soham Gugale - Computational Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">SG</a>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="container">
+            <div class="nav-brand">Soham Gugale</div>
+            <div class="nav-menu">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Soham Gugale</h1>
-            <h2>Computational Engineer | Applied Mathematics & Deep Learning</h2>
-            <p>Specializing in C++, Python, Optimization, and Machine Learning</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn-secondary">View Projects</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Soham Gugale</h1>
+            <h2>Computational Engineer | ML & Quantitative Finance</h2>
+            <p class="hero-description">
+                Computational engineering graduate student specializing in machine learning applications, 
+                quantitative finance modeling, and data-driven optimization. Experienced in developing 
+                GPU-accelerated algorithms, financial derivatives pricing models, and predictive analytics systems.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://github.com/sohamgugale" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="https://linkedin.com/in/sohamgugale" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                <a href="mailto:soham.gugale@duke.edu" class="btn btn-secondary">Email</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a Computational Engineer pursuing my Master's at Duke University's Pratt School of Engineering, specializing in Computational Mechanics and Scientific Computing. With a strong foundation from IIT Bombay, I combine theoretical rigor with practical applications in machine learning, optimization, and high-performance computing.</p>
-                    <p>My work spans from developing high-performance C++ backends for large-scale recommendation systems to implementing deep learning models for complex engineering problems. I'm passionate about leveraging computational techniques to solve real-world challenges in infrastructure, data science, and artificial intelligence.</p>
-                </div>
+                <p>
+                    I am a Master's student in Computational Mechanics and Scientific Computing at Duke University, 
+                    with a background in Civil Engineering from IIT Bombay. My work focuses on applying computational 
+                    methods to solve complex problems across machine learning, quantitative finance, and structural optimization.
+                </p>
+                <p>
+                    My technical experience spans GPU programming with CUDA, deep learning architectures including LSTMs and GANs, 
+                    options pricing with Black-Scholes models, and large-scale data analysis. I have contributed to research 
+                    projects at IIT Bombay and delivered production solutions through internships at KultureHire and S.R. Construction.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="section education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Master's in Computational Mechanics and Scientific Computing</h3>
-                        <h4>Duke University - Pratt School of Engineering</h4>
-                        <p class="timeline-date">Aug 2025 - Dec 2026</p>
-                        <p class="timeline-location">Durham, NC</p>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Duke_University_logo.svg/1200px-Duke_University_logo.svg.png" alt="Duke University">
                     </div>
+                    <h3>Duke University</h3>
+                    <p class="degree">Master of Science</p>
+                    <p class="field">Computational Mechanics & Scientific Computing</p>
+                    <p class="location">Durham, North Carolina</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Bachelor's in Civil Engineering</h3>
-                        <h4>Indian Institute of Technology, Bombay</h4>
-                        <p class="timeline-date">Aug 2021 - May 2025</p>
-                        <p class="timeline-location">Bombay, India</p>
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png" alt="IIT Bombay">
                     </div>
+                    <h3>IIT Bombay</h3>
+                    <p class="degree">Bachelor of Technology</p>
+                    <p class="field">Civil Engineering</p>
+                    <p class="location">Mumbai, India</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Undergraduate Research Assistant</h3>
-                    <p class="experience-date">Aug 2024 - May 2025</p>
-                    <h4>IIT Bombay, India</h4>
-                    <ul>
-                        <li>Developed C++ backend modules achieving <strong>20% faster inference speed</strong> for large-scale recommendation systems</li>
-                        <li>Optimized algorithms handling <strong>10M+ data points</strong>, reducing memory usage by <strong>15%</strong></li>
-                        <li>Authored comprehensive technical report detailing methodology and performance benchmarking</li>
-                    </ul>
-                </div>
-
-                <div class="experience-card">
-                    <h3>Data Science Intern</h3>
-                    <p class="experience-date">May 2024 - Jul 2024</p>
-                    <h4>KultureHire, Puducherry, India</h4>
-                    <ul>
-                        <li>Designed 3 interactive Power BI dashboards driving <strong>25% faster decision-making</strong></li>
-                        <li>Analyzed <strong>5,000+ survey responses</strong> using SQL (CTEs, joins) for Gen-Z career insights</li>
-                        <li>Automated ETL pipeline reducing reporting time by <strong>40%</strong></li>
-                    </ul>
-                </div>
-
-                <div class="experience-card">
-                    <h3>Research Intern (Decarbonisation Thesis)</h3>
-                    <p class="experience-date">May 2023 - Jul 2023</p>
-                    <h4>IIT Bombay, India</h4>
-                    <p class="supervisor">Under Prof. Ajay Deshpande</p>
-                    <ul>
-                        <li>Conducted lifecycle carbon assessment for <strong>6 infrastructure projects</strong></li>
-                        <li>Developed simulation models estimating <strong>18-22% carbon reduction</strong> using alternative materials</li>
-                        <li>Proposed policy framework adopted in departmental whitepaper</li>
-                    </ul>
-                </div>
-
-                <div class="experience-card">
-                    <h3>Structural Design Engineer Intern</h3>
-                    <p class="experience-date">May 2022 - Jul 2022</p>
-                    <h4>S.R. Construction, Pune, India</h4>
-                    <ul>
-                        <li>Designed 4-storey RCC office building in ETABS (IS 456, IS 1893 compliant)</li>
-                        <li>Applied ML-based optimization reducing material consumption by <strong>12%</strong></li>
-                        <li>Implemented regression models improving lateral drift prediction by <strong>15%</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section with Categories -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Technical Skills & Interests</h2>
             
-            <!-- Project Filter Buttons -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                <button class="filter-btn" data-filter="quant">Quantitative Finance</button>
-                <button class="filter-btn" data-filter="data">Data Analysis</button>
-            </div>
-
-            <!-- Project Grid -->
-            <div class="projects-grid">
-                <!-- ML Projects -->
-                <div class="project-card" data-category="ml">
-                    <div class="project-header">
-                        <h3>Stock Sentiment Dashboard</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p>Real-time stock sentiment analysis using NLP and ML. Combines financial news sentiment with stock price movements using VADER and TextBlob models.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">VADER</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/stock-sentiment-dashboard" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-header">
-                        <h3>GPU Image Processing Pipeline</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p>CUDA-accelerated image processing with grayscale conversion, Gaussian blur, and edge detection. Achieves significant speedup using CuPy for GPU computation.</p>
-                    <div class="project-tags">
-                        <span class="tag">CUDA</span>
-                        <span class="tag">CuPy</span>
-                        <span class="tag">Computer Vision</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/gpu_image_processing" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-header">
-                        <h3>Stock Price Forecasting using Deep Learning</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p>Trained LSTM models on 1 year of stock data achieving <strong>90% accuracy</strong> with MSE of <strong>0.0005</strong>, significantly outperforming RNN models.</p>
-                    <div class="project-tags">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">LSTM</span>
-                        <span class="tag">Time Series</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/Neural-Network-Classifier" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-header">
-                        <h3>AI-Based Image Denoising</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p>Implemented DnCNN and autoencoders improving PSNR from <strong>20.53 to 31.19</strong>, reducing training convergence time by <strong>15 epochs</strong>.</p>
-                    <div class="project-tags">
-                        <span class="tag">GANs</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">CNN</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/Image-Colourization-Using-GANs" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-header">
-                        <h3>SMS Spam Detection System</h3>
-                        <span class="project-category">Machine Learning</span>
-                    </div>
-                    <p>Built NLP-based classification model using Python, Pandas, NLTK, and Scikit-learn achieving high accuracy in detecting spam messages.</p>
-                    <div class="project-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">NLTK</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <!-- Quant Projects -->
-                <div class="project-card" data-category="quant">
-                    <div class="project-header">
-                        <h3>Options Pricing Engine</h3>
-                        <span class="project-category">Quantitative Finance</span>
-                    </div>
-                    <p>High-performance quantitative finance toolkit implementing Black-Scholes model with C++ and Python. Features Greeks analysis and risk analytics.</p>
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Black-Scholes</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/Options_pricing_engine" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="quant">
-                    <div class="project-header">
-                        <h3>Chess Risk Analyzer</h3>
-                        <span class="project-category">Quantitative Finance</span>
-                    </div>
-                    <p>Quantitative chess analysis using financial risk modeling. Features Monte Carlo simulations, VaR calculations, and position volatility metrics.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Monte Carlo</span>
-                        <span class="tag">Risk Analysis</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/chess-risk-analyzer" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <div class="project-card" data-category="quant">
-                    <div class="project-header">
-                        <h3>Multigrid PDE Solver</h3>
-                        <span class="project-category">Quantitative Finance</span>
-                    </div>
-                    <p>Parallel multigrid solver for high-dimensional PDEs with OpenMP and CUDA support. Used for option pricing and computational finance applications.</p>
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">CUDA</span>
-                        <span class="tag">OpenMP</span>
-                        <span class="tag">PDE</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/multigrid-pde-solver" class="project-link" target="_blank">View Project</a>
-                </div>
-
-                <!-- Data Analysis Projects -->
-                <div class="project-card" data-category="data">
-                    <div class="project-header">
-                        <h3>Olympic Data Analysis</h3>
-                        <span class="project-category">Data Analysis</span>
-                    </div>
-                    <p>Built comprehensive dashboard analyzing <strong>120k+ records</strong> across 120+ years of Olympic history with heatmaps and rankings revealing medal distribution patterns.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Data Viz</span>
-                        <span class="tag">Pandas</span>
-                    </div>
-                    <a href="https://github.com/sohamgugale/Olympic-data-analysis" class="project-link" target="_blank">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                    </div>
-                </div>
-
                 <div class="skill-category">
                     <h3>Machine Learning</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">CNNs</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">LLMs</span>
-                        <span class="skill-tag">Regression</span>
-                        <span class="skill-tag">Clustering</span>
-                        <span class="skill-tag">Statistical Modeling</span>
+                        <span>Deep Learning</span>
+                        <span>LSTM Networks</span>
+                        <span>GANs</span>
+                        <span>NLP</span>
+                        <span>Classification</span>
+                        <span>Computer Vision</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Libraries & Frameworks</h3>
+                    <h3>Quantitative Finance</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">XGBoost</span>
-                        <span class="skill-tag">LightGBM</span>
+                        <span>Options Pricing</span>
+                        <span>Black-Scholes</span>
+                        <span>Stock Forecasting</span>
+                        <span>Portfolio Optimization</span>
+                        <span>Risk Analysis</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Programming & Tools</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">VSCode</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Jupyter</span>
-                        <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">AutoCAD</span>
-                        <span class="skill-tag">ETABS</span>
-                        <span class="skill-tag">Revit</span>
+                        <span>Python</span>
+                        <span>CUDA/GPU Computing</span>
+                        <span>TensorFlow/PyTorch</span>
+                        <span>Pandas/NumPy</span>
+                        <span>Scikit-learn</span>
+                        <span>Git</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Certifications</h3>
+                    <h3>Data Analysis</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">SQL Bootcamp (Udemy)</span>
-                        <span class="skill-tag">Data Science with Python (Simplilearn)</span>
-                        <span class="skill-tag">Microsoft Excel (Udemy)</span>
-                        <span class="skill-tag">Autodesk Revit (Udemy)</span>
+                        <span>Statistical Analysis</span>
+                        <span>Data Visualization</span>
+                        <span>Feature Engineering</span>
+                        <span>Time Series Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests-section">
+                <h3>Personal Interests</h3>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <div class="interest-icon">🏏</div>
+                        <h4>Cricket</h4>
+                        <p>Avid follower and player</p>
+                    </div>
+                    <div class="interest-item">
+                        <div class="interest-icon">♟️</div>
+                        <h4>Chess</h4>
+                        <p>Strategic thinking enthusiast</p>
+                    </div>
+                    <div class="interest-item">
+                        <div class="interest-icon">📈</div>
+                        <h4>Financial Markets</h4>
+                        <p>Stock market analysis and trading</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Auto-updated from my GitHub repositories</p>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="quant">Quant Finance</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+                <button class="filter-btn" data-filter="computation">Computational</button>
+            </div>
+
+            <div id="projectsGrid" class="projects-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading projects...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">I'm currently pursuing my Master's at Duke University and open to collaboration opportunities, research positions, and interesting projects.</p>
-            
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <a href="mailto:sohamgugale170@gmail.com">sohamgugale170@gmail.com</a>
+            <div class="contact-content">
+                <p>I'm actively seeking opportunities in machine learning, quantitative finance, and data science. 
+                   Open to full-time positions, internships, and research collaborations.</p>
+                <div class="contact-links">
+                    <a href="mailto:soham.gugale@duke.edu" class="contact-link">
+                        <span class="icon">📧</span> soham.gugale@duke.edu
+                    </a>
+                    <a href="https://github.com/sohamgugale" target="_blank" class="contact-link">
+                        <span class="icon">💻</span> github.com/sohamgugale
+                    </a>
+                    <a href="https://linkedin.com/in/sohamgugale" target="_blank" class="contact-link">
+                        <span class="icon">🔗</span> linkedin.com/in/sohamgugale
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <a href="tel:+19196415666">(919) 641-5666</a>
-                </div>
-                <div class="contact-item">
-                    <h3>Location</h3>
-                    <p>Durham, NC</p>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <a href="https://github.com/sohamgugale" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/sohamgugale" target="_blank">LinkedIn</a>
-                <a href="https://sohamgugale.github.io/Portfolio_site/" target="_blank">Portfolio</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Soham Gugale. Built with passion and code.</p>
+        <div class="container">
+            <p>© 2025 Soham Gugale | Last updated: <span id="lastUpdate">Loading...</span></p>
+            <p class="footer-note">Portfolio auto-updates daily via GitHub Actions</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

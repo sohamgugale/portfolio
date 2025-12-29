@@ -1,0 +1,13 @@
+{
+  "name": "soham-gugale-portfolio",
+  "version": "2.0.0",
+  "scripts": {
+    "update": "node scripts/update-portfolio.js",
+    "dev": "python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "dotenv": "^16.3.1",
+    "anthropic": "^0.30.0"
+  }
+}
