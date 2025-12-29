@@ -1,1 +1,435 @@
-[{"name":"portfolio","description":"Professional portfolio","category":"computation","categoryName":"Computational","url":"https://github.com/sohamgugale/portfolio","stars":0,"language":"JavaScript","languages":{"JavaScript":5000},"lastUpdated":"2025-12-28T00:00:00Z"}]
+[
+  {
+    "name": "portfolio",
+    "description": "Website for applications",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/portfolio",
+    "stars": 0,
+    "language": "HTML",
+    "languages": {
+      "HTML": 9921,
+      "CSS": 8353,
+      "JavaScript": 7922
+    },
+    "lastUpdated": "2025-12-29T03:54:35Z"
+  },
+  {
+    "name": "chess-opening-analyser",
+    "description": "Financial analytics for chess openings - ROI, Sharpe ratios, and risk-return optimization",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/chess-opening-analyser",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 42942
+    },
+    "lastUpdated": "2025-12-28T00:41:08Z"
+  },
+  {
+    "name": "Olympic-data-analysis",
+    "description": "Explores Olympic Games historical data using Python and Pandas. Analyzes medal distributions, country performance trends, and athlete statistics across multiple Olympic events.",
+    "category": "data",
+    "categoryName": "Data Analysis",
+    "url": "https://github.com/sohamgugale/Olympic-data-analysis",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 12036,
+      "Shell": 141,
+      "Procfile": 40
+    },
+    "lastUpdated": "2025-12-25T01:08:18Z"
+  },
+  {
+    "name": "cricmetrics-ipl-app",
+    "description": "IPL analytics and predictions",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/cricmetrics-ipl-app",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 75700
+    },
+    "lastUpdated": "2025-12-23T16:42:43Z"
+  },
+  {
+    "name": "cricmetrics-app",
+    "description": "Cricket analysis of real games and stats",
+    "category": "data",
+    "categoryName": "Data Analysis",
+    "url": "https://github.com/sohamgugale/cricmetrics-app",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 19668
+    },
+    "lastUpdated": "2025-12-22T21:58:23Z"
+  },
+  {
+    "name": "portfolio-optimiser",
+    "description": "Data Analysis on stocks in current market",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/portfolio-optimiser",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 47918
+    },
+    "lastUpdated": "2025-12-21T21:04:01Z"
+  },
+  {
+    "name": "regime-adaptive-strategy",
+    "description": "No description available",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/regime-adaptive-strategy",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 126705950,
+      "JavaScript": 24712020,
+      "Cython": 4658896,
+      "C": 1735935,
+      "CSS": 665613,
+      "C++": 208863,
+      "XSLT": 154752,
+      "Jinja": 97649,
+      "Fortran": 70897,
+      "HTML": 32255,
+      "Jupyter Notebook": 16427,
+      "PowerShell": 9033,
+      "Smarty": 8743,
+      "Roff": 7435,
+      "Shell": 5235,
+      "Batchfile": 2833,
+      "R": 2439,
+      "Makefile": 1706,
+      "Lua": 139
+    },
+    "lastUpdated": "2025-12-16T05:21:39Z"
+  },
+  {
+    "name": "my-portfolio",
+    "description": "My portfolio website",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/my-portfolio",
+    "stars": 0,
+    "language": null,
+    "languages": {},
+    "lastUpdated": "2025-12-13T06:55:54Z"
+  },
+  {
+    "name": "chess-risk-analyzer",
+    "description": "Chess risk analysis using quant simulations.",
+    "category": "data",
+    "categoryName": "Data Analysis",
+    "url": "https://github.com/sohamgugale/chess-risk-analyzer",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 69446
+    },
+    "lastUpdated": "2025-12-12T05:55:22Z"
+  },
+  {
+    "name": "DSA-Solutions",
+    "description": "My solutions to Data Structures and Algorithms problems",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/DSA-Solutions",
+    "stars": 0,
+    "language": null,
+    "languages": {},
+    "lastUpdated": "2025-12-07T21:10:18Z"
+  },
+  {
+    "name": "multigrid-pde-solver",
+    "description": "Parallel multigrid solver for high-dimensional PDEs with OpenMP support",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/multigrid-pde-solver",
+    "stars": 0,
+    "language": "C++",
+    "languages": {
+      "C++": 29629,
+      "CMake": 2260,
+      "Python": 1824
+    },
+    "lastUpdated": "2025-12-07T02:59:00Z"
+  },
+  {
+    "name": "stock-sentiment-dashboard",
+    "description": "Real-time stock sentiment analysis using ML and NLP",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/stock-sentiment-dashboard",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 126887216,
+      "C++": 5226941,
+      "Cython": 4877053,
+      "C": 915869,
+      "JavaScript": 47256,
+      "Fortran": 36224,
+      "Meson": 35093,
+      "CSS": 18595,
+      "Roff": 13266,
+      "PowerShell": 8834,
+      "Smarty": 8486,
+      "HTML": 5968,
+      "Shell": 3836,
+      "CMake": 1692,
+      "Jinja": 1570,
+      "Batchfile": 676,
+      "Lua": 139
+    },
+    "lastUpdated": "2025-12-06T04:38:04Z"
+  },
+  {
+    "name": "Options_pricing_engine",
+    "description": "High-performance quantitative finance toolkit for options pricing and risk analytics using C++ and Python",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Options_pricing_engine",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 15316,
+      "C++": 6689
+    },
+    "lastUpdated": "2025-12-01T09:25:44Z"
+  },
+  {
+    "name": "Test_2",
+    "description": "Second test of Portfolio website",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Test_2",
+    "stars": 0,
+    "language": "CSS",
+    "languages": {
+      "CSS": 17199,
+      "HTML": 12438,
+      "JavaScript": 5918
+    },
+    "lastUpdated": "2025-11-07T22:08:20Z"
+  },
+  {
+    "name": "Portfolio_site",
+    "description": "my website",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Portfolio_site",
+    "stars": 0,
+    "language": "TypeScript",
+    "languages": {
+      "TypeScript": 26777,
+      "HTML": 21065,
+      "CSS": 13149,
+      "JavaScript": 4471
+    },
+    "lastUpdated": "2025-10-27T05:00:54Z"
+  },
+  {
+    "name": "gpu_image_processing",
+    "description": "Cuda_project",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/gpu_image_processing",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 3879
+    },
+    "lastUpdated": "2025-10-17T05:46:49Z"
+  },
+  {
+    "name": "Website",
+    "description": "My site",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Website",
+    "stars": 0,
+    "language": null,
+    "languages": {},
+    "lastUpdated": "2025-10-02T02:14:31Z"
+  },
+  {
+    "name": "My_CV",
+    "description": "Portfolio Site",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/My_CV",
+    "stars": 0,
+    "language": "HTML",
+    "languages": {
+      "HTML": 21064,
+      "CSS": 13148,
+      "JavaScript": 4470
+    },
+    "lastUpdated": "2025-10-02T02:06:06Z"
+  },
+  {
+    "name": "Decarbonisation_Thesis",
+    "description": "Final Sem Thesis Project",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Decarbonisation_Thesis",
+    "stars": 0,
+    "language": null,
+    "languages": {},
+    "lastUpdated": "2025-09-13T22:07:06Z"
+  },
+  {
+    "name": "soham_gugale",
+    "description": "Portfolio",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/soham_gugale",
+    "stars": 0,
+    "language": null,
+    "languages": {},
+    "lastUpdated": "2025-06-17T17:43:55Z"
+  },
+  {
+    "name": "GAN",
+    "description": "No description available",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/GAN",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 458661
+    },
+    "lastUpdated": "2025-03-23T18:08:27Z"
+  },
+  {
+    "name": "Resume",
+    "description": "No description available",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Resume",
+    "stars": 0,
+    "language": "HTML",
+    "languages": {
+      "HTML": 32838,
+      "CSS": 1175,
+      "JavaScript": 663,
+      "PHP": 609
+    },
+    "lastUpdated": "2024-10-04T13:34:13Z"
+  },
+  {
+    "name": "Chess_analysis",
+    "description": "No description available",
+    "category": "data",
+    "categoryName": "Data Analysis",
+    "url": "https://github.com/sohamgugale/Chess_analysis",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 1906
+    },
+    "lastUpdated": "2024-10-04T02:07:12Z"
+  },
+  {
+    "name": "Truss-Optimization",
+    "description": "No description available",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Truss-Optimization",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 9686
+    },
+    "lastUpdated": "2024-10-02T08:40:16Z"
+  },
+  {
+    "name": "Pendulum_simulation",
+    "description": "No description available",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Pendulum_simulation",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 9304
+    },
+    "lastUpdated": "2024-10-02T03:48:53Z"
+  },
+  {
+    "name": "Decision-Trees-Random-Forest-Gradient-Boosting",
+    "description": "No description available",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Decision-Trees-Random-Forest-Gradient-Boosting",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 442369
+    },
+    "lastUpdated": "2024-08-13T17:24:39Z"
+  },
+  {
+    "name": "Neural-Network-Classifier",
+    "description": "No description available",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/Neural-Network-Classifier",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 1053340
+    },
+    "lastUpdated": "2024-08-10T10:43:39Z"
+  },
+  {
+    "name": "Image-Colourization-Using-GANs",
+    "description": "Transforms grayscale images to color using Generative Adversarial Networks. Implements a conditional GAN architecture trained on paired grayscale and color image datasets.",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/Image-Colourization-Using-GANs",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 1272355,
+      "Python": 13444
+    },
+    "lastUpdated": "2024-08-10T07:49:47Z"
+  },
+  {
+    "name": "Resume-Generation",
+    "description": "Generates formatted resumes from structured data using Python and LaTeX. Supports multiple template layouts and customizable section ordering.",
+    "category": "computation",
+    "categoryName": "Computational",
+    "url": "https://github.com/sohamgugale/Resume-Generation",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 19951277,
+      "Python": 13237
+    },
+    "lastUpdated": "2024-08-10T07:40:09Z"
+  },
+  {
+    "name": "SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-",
+    "description": "Classifies SMS messages as spam or legitimate using Natural Language Processing techniques. Implements NLTK for text preprocessing, TF-IDF for feature extraction, and scikit-learn for model training and evaluation.",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-",
+    "stars": 0,
+    "language": "Jupyter Notebook",
+    "languages": {
+      "Jupyter Notebook": 19055
+    },
+    "lastUpdated": "2024-08-10T07:23:07Z"
+  }
+]

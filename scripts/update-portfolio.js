@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Octokit } = require('@octokit/rest');
-const Anthropic = require('anthropic');
+const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs').promises;
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });

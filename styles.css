@@ -492,3 +492,15 @@ body {
     width: auto;
     object-fit: contain;
 }
+
+.duration {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.education-photo img {
+    min-height: 200px;
+    background: var(--bg-alt);
+}
