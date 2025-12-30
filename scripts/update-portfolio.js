@@ -8,15 +8,20 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const CATEGORIES = {
   ml: { name: 'Machine Learning', keywords: ['learning', 'lstm', 'gan', 'neural', 'detection', 'spam', 'classification', 'image', 'colourization', 'colorization', 'sentiment', 'nlp'] },
-  quant: { name: 'Quantitative Finance', keywords: ['finance', 'stock', 'options', 'pricing', 'trading', 'portfolio', 'black-scholes', 'derivatives', 'forecasting', 'sharpe', 'roi', 'chess'] },
+  quant: { name: 'Quantitative Finance', keywords: ['finance', 'stock', 'options', 'pricing', 'trading', 'portfolio', 'black-scholes', 'derivatives', 'forecasting', 'sharpe', 'roi', 'chess', 'opening'] },
   data: { name: 'Data Analytics', keywords: ['analysis', 'olympic', 'visualization', 'dataset', 'statistics', 'ipl', 'cricket', 'dashboard', 'metrics', 'business'] },
   computation: { name: 'High Performance Computing', keywords: ['cuda', 'gpu', 'parallel', 'optimization', 'fem', 'computational', 'acceleration'] }
 };
 
-const RELEVANT_PROJECTS = [
-  'olympic', 'data', 'analysis', 'spam', 'detection', 'sms', 'image', 'colourization', 'colorization', 
-  'gan', 'stock', 'forecasting', 'lstm', 'sentiment', 'portfolio', 'chess', 'roi', 'opening', 'ipl', 
-  'cricket', 'business', 'analytics', 'dashboard', 'finance', 'options', 'pricing', 'cuda', 'gpu'
+// STRICT whitelist - only show these specific projects
+const WHITELIST_EXACT = [
+  'Olympic-data-analysis',
+  'SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-',
+  'Image-Colourization-Using-GANs',
+  'CricMetrics-Pro',
+  'IPL-Business-Analytics',
+  'Stock-Sentiment-Dashboard',
+  'Chess-Opening-ROI'
 ];
 
 async function fetchRepositories() {
@@ -28,13 +33,29 @@ async function fetchRepositories() {
     per_page: 100
   });
   
+  // STRICT filtering - only exact matches or close variants
   const filtered = repos.filter(repo => {
     if (repo.fork || repo.name === process.env.GITHUB_USERNAME || repo.name === 'portfolio') return false;
+    
     const name = repo.name.toLowerCase();
-    return RELEVANT_PROJECTS.some(keyword => name.includes(keyword));
+    
+    // Check exact matches first
+    if (WHITELIST_EXACT.some(exact => repo.name === exact)) return true;
+    
+    // Check close variants
+    return (
+      name.includes('olympic') ||
+      name.includes('spam') ||
+      name.includes('detection') ||
+      (name.includes('image') && (name.includes('color') || name.includes('gan'))) ||
+      (name.includes('cricket') || name.includes('ipl')) ||
+      (name.includes('stock') && name.includes('sentiment')) ||
+      (name.includes('chess') && name.includes('opening'))
+    );
   });
   
-  console.log(`Found ${filtered.length} relevant repositories (from ${repos.length} total)`);
+  console.log(`Found ${filtered.length} relevant projects (from ${repos.length} total)`);
+  filtered.forEach(r => console.log(`  - ${r.name}`));
   return filtered;
 }
 
@@ -64,25 +85,30 @@ async function generateDescription(repo, category) {
       max_tokens: 150,
       messages: [{
         role: 'user',
-        content: `Write a professional 2-3 sentence description for this ${CATEGORIES[category].name} project.
+        content: `Write a compelling 2-3 sentence description for this ${CATEGORIES[category].name} project that will impress recruiters.
 
 Project: ${repo.name}
 Original: ${repo.description || 'No description'}
 Languages: ${Object.keys(repo.languages || {}).join(', ')}
 
-Requirements: Technical, specific about methods/algorithms, present tense, no hype words, under 100 words.`
+Requirements: Professional, highlight impact and technical depth, mention specific technologies/methods, present tense, under 100 words. Make it stand out.`
       }]
     });
     return message.content[0].text.trim();
   } catch (error) {
     console.error(`Error: ${error.message}`);
-    return repo.description || 'Advanced computational project';
+    return repo.description || 'Advanced computational project demonstrating technical expertise.';
   }
 }
 
 async function main() {
-  console.log('🚀 Updating portfolio...\n');
+  console.log('🚀 Updating portfolio with curated projects...\n');
   const repos = await fetchRepositories();
+  
+  if (repos.length === 0) {
+    console.log('⚠️  No matching projects found');
+    return;
+  }
   
   const projects = [];
   for (const repo of repos) {
@@ -110,7 +136,7 @@ async function main() {
   await fs.mkdir('data', { recursive: true });
   await fs.writeFile('data/projects.json', JSON.stringify(projects, null, 2));
   
-  console.log(`\n✅ Saved ${projects.length} projects`);
+  console.log(`\n✅ Saved ${projects.length} curated projects`);
   Object.entries(CATEGORIES).forEach(([key, cat]) => {
     const count = projects.filter(p => p.category === key).length;
     if (count > 0) console.log(`  ${cat.name}: ${count}`);
