@@ -6,66 +6,18 @@ const fs = require('fs').promises;
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-// Only include graduate-level, job-market relevant projects
-const WHITELIST = [
-  'Olympic-data-analysis',
-  'SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-',
-  'Image-Colourization-Using-GANs',
-  'Stock-Price-Prediction',
-  'Options-Pricing',
-  'Black-Scholes-Model',
-  'CUDA-Image-Processing',
-  'GPU-Acceleration',
-  'LSTM-Stock-Forecasting',
-  'Portfolio-Optimization',
-  'Financial-Derivatives',
-  'Deep-Learning-Classification',
-  'NLP-Text-Analysis',
-  'Time-Series-Analysis',
-  'FEM-Analysis',
-  'Structural-Optimization',
-  'Computational-Mechanics',
-  'Parallel-Computing'
-];
-
 const CATEGORIES = {
-  ml: { 
-    name: 'Machine Learning',
-    keywords: ['learning', 'lstm', 'gan', 'neural', 'detection', 'spam', 'classification', 'deep', 'nlp', 'text', 'image', 'colourization', 'colorization'],
-    description: 'Deep learning and machine learning applications'
-  },
-  quant: { 
-    name: 'Quantitative Finance',
-    keywords: ['finance', 'stock', 'options', 'pricing', 'trading', 'portfolio', 'black-scholes', 'derivatives', 'forecasting'],
-    description: 'Financial modeling and quantitative analysis'
-  },
-  data: { 
-    name: 'Data Analysis',
-    keywords: ['analysis', 'olympic', 'visualization', 'dataset', 'statistics', 'time-series'],
-    description: 'Statistical analysis and data visualization'
-  },
-  computation: { 
-    name: 'High Performance Computing',
-    keywords: ['cuda', 'gpu', 'parallel', 'optimization', 'fem', 'computational', 'acceleration', 'mechanics', 'structural'],
-    description: 'GPU computing and computational mechanics'
-  }
+  ml: { name: 'Machine Learning', keywords: ['learning', 'lstm', 'gan', 'neural', 'detection', 'spam', 'classification', 'image', 'colourization', 'colorization', 'sentiment', 'nlp'] },
+  quant: { name: 'Quantitative Finance', keywords: ['finance', 'stock', 'options', 'pricing', 'trading', 'portfolio', 'black-scholes', 'derivatives', 'forecasting', 'sharpe', 'roi', 'chess'] },
+  data: { name: 'Data Analytics', keywords: ['analysis', 'olympic', 'visualization', 'dataset', 'statistics', 'ipl', 'cricket', 'dashboard', 'metrics', 'business'] },
+  computation: { name: 'High Performance Computing', keywords: ['cuda', 'gpu', 'parallel', 'optimization', 'fem', 'computational', 'acceleration'] }
 };
 
-const MANUAL = {
-  "Olympic-data-analysis": "Statistical analysis of Olympic Games historical data using Python and Pandas. Explores medal distributions, country performance trends, and athlete demographics across multiple Olympic cycles. Implements data visualization techniques to identify patterns in competitive sports.",
-  
-  "SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-": "Text classification system for spam detection using Natural Language Processing. Implements TF-IDF vectorization for feature extraction and compares multiple scikit-learn classifiers. Achieves high accuracy through systematic preprocessing with NLTK and model evaluation.",
-  
-  "Image-Colourization-Using-GANs": "Generative Adversarial Network for automated image colorization. Implements conditional GAN architecture trained on paired grayscale and color datasets. Demonstrates adversarial training techniques for image-to-image translation tasks.",
-  
-  "LSTM-Stock-Forecasting": "Stock price prediction using Long Short-Term Memory networks. Implements time series forecasting with feature engineering from historical price data. Evaluates model performance using standard financial metrics and backtesting.",
-  
-  "Options-Pricing": "Options pricing engine implementing Black-Scholes model and Monte Carlo simulations. Calculates theoretical values for European and American options with Greeks computation. Provides risk analysis framework for derivatives trading.",
-  
-  "CUDA-Image-Processing": "GPU-accelerated image processing using CUDA programming. Implements parallel algorithms for convolution, filtering, and transformation operations. Demonstrates significant performance improvements over CPU implementations.",
-  
-  "Portfolio-Optimization": "Mean-variance portfolio optimization using modern portfolio theory. Implements efficient frontier calculation and Sharpe ratio maximization. Provides asset allocation strategies based on risk-return tradeoffs."
-};
+const RELEVANT_PROJECTS = [
+  'olympic', 'data', 'analysis', 'spam', 'detection', 'sms', 'image', 'colourization', 'colorization', 
+  'gan', 'stock', 'forecasting', 'lstm', 'sentiment', 'portfolio', 'chess', 'roi', 'opening', 'ipl', 
+  'cricket', 'business', 'analytics', 'dashboard', 'finance', 'options', 'pricing', 'cuda', 'gpu'
+];
 
 async function fetchRepositories() {
   console.log('Fetching repositories...');
@@ -76,14 +28,13 @@ async function fetchRepositories() {
     per_page: 100
   });
   
-  // Filter for whitelisted projects only
-  const filtered = repos.filter(repo => 
-    !repo.fork && 
-    repo.name !== process.env.GITHUB_USERNAME &&
-    WHITELIST.some(name => repo.name.toLowerCase().includes(name.toLowerCase()))
-  );
+  const filtered = repos.filter(repo => {
+    if (repo.fork || repo.name === process.env.GITHUB_USERNAME || repo.name === 'portfolio') return false;
+    const name = repo.name.toLowerCase();
+    return RELEVANT_PROJECTS.some(keyword => name.includes(keyword));
+  });
   
-  console.log(`Found ${filtered.length} relevant repositories (filtered from ${repos.length} total)`);
+  console.log(`Found ${filtered.length} relevant repositories (from ${repos.length} total)`);
   return filtered;
 }
 
@@ -97,56 +48,43 @@ async function fetchRepoDetails(repo) {
 
 function categorizeProject(repo) {
   const searchText = `${repo.name} ${repo.description || ''}`.toLowerCase();
-  
   for (const [key, category] of Object.entries(CATEGORIES)) {
     if (category.keywords.some(kw => searchText.includes(kw))) {
       return key;
     }
   }
-  return 'computation';
+  return 'data';
 }
 
 async function generateDescription(repo, category) {
-  if (MANUAL[repo.name]) {
-    console.log(`  Using manual description`);
-    return MANUAL[repo.name];
-  }
-
   try {
-    console.log(`  Generating AI description...`);
+    console.log(`  Generating description...`);
     const message = await anthropic.messages.create({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 200,
+      max_tokens: 150,
       messages: [{
         role: 'user',
-        content: `Write a professional 2-3 sentence description for this graduate-level ${CATEGORIES[category].name} project.
+        content: `Write a professional 2-3 sentence description for this ${CATEGORIES[category].name} project.
 
 Project: ${repo.name}
-Category: ${CATEGORIES[category].description}
-Original description: ${repo.description || 'No description'}
+Original: ${repo.description || 'No description'}
 Languages: ${Object.keys(repo.languages || {}).join(', ')}
 
-Focus on: technical implementation, algorithms/methods used, and practical applications. Use present tense. Be specific and technical. No hype words.`
+Requirements: Technical, specific about methods/algorithms, present tense, no hype words, under 100 words.`
       }]
     });
     return message.content[0].text.trim();
   } catch (error) {
-    console.error(`Error generating description: ${error.message}`);
+    console.error(`Error: ${error.message}`);
     return repo.description || 'Advanced computational project';
   }
 }
 
 async function main() {
-  console.log('🚀 Starting portfolio update...\n');
+  console.log('🚀 Updating portfolio...\n');
   const repos = await fetchRepositories();
   
-  if (repos.length === 0) {
-    console.log('⚠️  No matching projects found. Check your repository names.');
-    return;
-  }
-  
   const projects = [];
-  
   for (const repo of repos) {
     console.log(`\nProcessing: ${repo.name}`);
     const details = await fetchRepoDetails(repo);
@@ -172,8 +110,7 @@ async function main() {
   await fs.mkdir('data', { recursive: true });
   await fs.writeFile('data/projects.json', JSON.stringify(projects, null, 2));
   
-  console.log(`\n✅ Saved ${projects.length} graduate-level projects`);
-  console.log('\nProjects by category:');
+  console.log(`\n✅ Saved ${projects.length} projects`);
   Object.entries(CATEGORIES).forEach(([key, cat]) => {
     const count = projects.filter(p => p.category === key).length;
     if (count > 0) console.log(`  ${cat.name}: ${count}`);

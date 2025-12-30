@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadProjects();
     setupFilters();
     updateLastUpdated();
-    smoothScroll();
+    setupSmoothScroll();
 });
 
 async function loadProjects() {
@@ -32,7 +32,7 @@ function displayProjects(projects) {
         <div class="project-card" data-category="${project.category}" onclick="window.open('${project.url}', '_blank')">
             <div class="project-header">
                 <h3 class="project-title">${project.name}</h3>
-                <span class="project-category">${project.categoryName}</span>
+                <span class="project-category ${project.category}">${project.categoryName}</span>
             </div>
             <p class="project-description">${project.description}</p>
             <div class="project-meta">
@@ -82,7 +82,7 @@ function updateLastUpdated() {
     updateSpan.textContent = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-function smoothScroll() {
+function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
