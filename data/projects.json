@@ -1,1 +1,119 @@
-[{"name":"Olympic Data Analysis","description":"Comprehensive analysis of 120,000+ Olympic athlete records spanning 120 years using Python and Pandas","category":"data","categoryName":"Data Analytics","url":"https://github.com/sohamgugale/Olympic-data-analysis","stars":0,"language":"Python","languages":{"Python":15000},"lastUpdated":"2024-12-15T00:00:00Z"},{"name":"SMS Spam Detection","description":"NLP-powered spam classifier using NLTK, TF-IDF, and scikit-learn with high accuracy","category":"ml","categoryName":"Machine Learning","url":"https://github.com/sohamgugale","stars":0,"language":"Python","languages":{"Python":12000},"lastUpdated":"2024-11-20T00:00:00Z"},{"name":"Image Colorization GANs","description":"Automated image colorization using Generative Adversarial Networks trained on paired datasets","category":"ml","categoryName":"Machine Learning","url":"https://github.com/sohamgugale","stars":0,"language":"Python","languages":{"Python":18000},"lastUpdated":"2024-10-25T00:00:00Z"}]
+[
+  {
+    "name": "Portfolio-Optimization",
+    "description": "Modern Portfolio Theory optimizer analyzing 20+ stock portfolios using Markowitz mean-variance framework. Implements comprehensive risk analytics calculating VaR, CVaR, and Sharpe ratios across 5-year historical datasets with Monte Carlo simulations.",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Portfolio-Optimization",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 15000
+    },
+    "lastUpdated": "2024-12-20T00:00:00Z"
+  },
+  {
+    "name": "Stock-Price-Prediction",
+    "description": "Time series forecasting using LSTM networks for stock prediction with advanced feature engineering and backtesting framework.",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Stock-Price-Prediction",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 14000
+    },
+    "lastUpdated": "2024-12-10T00:00:00Z"
+  },
+  {
+    "name": "Options-Pricing-Engine",
+    "description": "Black-Scholes model and Monte Carlo simulations for options pricing with Greeks computation.",
+    "category": "quant",
+    "categoryName": "Quantitative Finance",
+    "url": "https://github.com/sohamgugale/Options-Pricing",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 12000
+    },
+    "lastUpdated": "2024-11-15T00:00:00Z"
+  },
+  {
+    "name": "Olympic-data-analysis",
+    "description": "Statistical analysis of 120,000+ Olympic athlete records spanning 120 years with interactive visualizations.",
+    "category": "data",
+    "categoryName": "Data Analytics",
+    "url": "https://github.com/sohamgugale/Olympic-data-analysis",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 15000
+    },
+    "lastUpdated": "2024-12-14T00:00:00Z"
+  },
+  {
+    "name": "CricMetrics-Pro-IPL",
+    "description": "Analysis of 578 IPL matches processing 50,000+ ball-by-ball records with Power BI dashboards.",
+    "category": "data",
+    "categoryName": "Data Analytics",
+    "url": "https://github.com/sohamgugale/CricMetrics-Pro",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 16000
+    },
+    "lastUpdated": "2024-11-05T00:00:00Z"
+  },
+  {
+    "name": "SMS-Spam-Detection",
+    "description": "NLP spam classifier achieving 98%+ accuracy using NLTK, TF-IDF, and scikit-learn ensemble methods.",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/SMS-Spam-Detection-System-with-Python-and-NLP-Python-Pandas-NLTK-Scikit-learn-",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 12000
+    },
+    "lastUpdated": "2024-11-19T00:00:00Z"
+  },
+  {
+    "name": "Image-Colorization-GANs",
+    "description": "Deep learning system for grayscale-to-color image translation using conditional GANs trained on 10,000+ images.",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/Image-Colourization-Using-GANs",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 18000
+    },
+    "lastUpdated": "2024-10-24T00:00:00Z"
+  },
+  {
+    "name": "Image-Classification-CNN",
+    "description": "CNN implementation for multi-class classification using TensorFlow with transfer learning from ResNet and VGG.",
+    "category": "ml",
+    "categoryName": "Machine Learning",
+    "url": "https://github.com/sohamgugale/Image-Classification",
+    "stars": 0,
+    "language": "Python",
+    "languages": {
+      "Python": 14000
+    },
+    "lastUpdated": "2024-09-20T00:00:00Z"
+  },
+  {
+    "name": "CUDA-Image-Processing",
+    "description": "GPU-accelerated image processing achieving 50x speedup using CUDA C++ with optimized parallel algorithms.",
+    "category": "computation",
+    "categoryName": "High Performance Computing",
+    "url": "https://github.com/sohamgugale/CUDA-Processing",
+    "stars": 0,
+    "language": "C++",
+    "languages": {
+      "C++": 12000
+    },
+    "lastUpdated": "2024-08-20T00:00:00Z"
+  }
+]
