@@ -10,18 +10,20 @@
 <body>
 
     <nav>
-        <div class="logo">SG.</div>
-        <div class="links">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#quant">Quant Finance</a>
-            <a href="#data">Data Science</a>
-            <a href="#achievements">Achievements</a>
+        <div class="nav-container">
+            <div class="logo">SG.</div>
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#quant">Quant</a>
+                <a href="#data">Data Science</a>
+                <a href="#achievements">Achievements</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
+        <div class="container">
             <div class="profile-container">
                 <img src="assets/images/profile.jpg" alt="Soham Gugale" class="profile-img">
             </div>
@@ -42,186 +44,183 @@
         </div>
     </header>
 
-    <section id="education" class="education-section">
-        <h2 class="section-title">Education</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Duke University</h3>
-                    <span class="tag cpp">2025 – Present</span>
-                </div>
-                <p><strong>Master of Engineering in Computational Mechanics & Scientific Computing</strong></p>
-                <ul>
-                    <li>Merit-based Graduate Scholarship Recipient.</li>
-                    <li>Focus: Numerical Linear Algebra, Machine Learning, Business Fundamentals.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3>Indian Institute of Technology, Bombay</h3>
-                    <span class="tag cpp">2021 – 2025</span>
-                </div>
-                <p><strong>Bachelor of Technology in Civil Engineering</strong></p>
-                <ul>
-                    <li>Ranked in Top 0.3% in JEE Mains and Top 2% in JEE Advanced.</li>
-                    <li>Undergraduate Research Assistant (Quant Finance).</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section" style="background-color: #0d1117;">
+    <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-text">
-                <p>My academic journey is driven by a passion for <strong>Quantitative Finance</strong> and <strong>Scientific Computing</strong>. I specialize in building high-performance algorithms for portfolio optimization and derivatives pricing using C++ and Python.</p>
+            <div class="grid" style="grid-template-columns: 1fr;"> 
+                <div class="card" style="border: none; background: transparent; padding: 0;">
+                    <p style="font-size: 1.05rem; color: #e6edf3; margin-bottom: 1.5rem; line-height: 1.8;">
+                        [cite_start]My academic journey began in Civil Engineering at <strong>IIT Bombay</strong>, where I developed a rigorous foundation in mathematical modeling and optimization[cite: 466, 470]. [cite_start]Now pursuing a Master of Engineering at <strong>Duke University</strong>, I have pivoted fully into Computational Mechanics and Quantitative Finance[cite: 465]. 
+                    </p>
+                    <p style="font-size: 1.05rem; color: #e6edf3; margin-bottom: 2.5rem; line-height: 1.8;">
+                        [cite_start]I specialize in designing high-performance algorithms for derivatives pricing and risk analytics, leveraging my expertise in <strong>Numerical Methods, C++, and Python</strong> to solve complex financial problems[cite: 463, 468, 470]. My goal is to bridge the gap between theoretical mathematical models and robust, production-grade software.
+                    </p>
+                    
+                    <div class="interests-container">
+                        <h3 style="font-size: 1rem; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Interests & Hobbies</h3>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag"><i class="fas fa-chess-knight"></i> Competitive Chess</span>
+                            <span class="hobby-tag"><i class="fas fa-cricket"></i> Cricket</span>
+                            <span class="hobby-tag"><i class="fas fa-book"></i> Financial History</span>
+                            <span class="hobby-tag"><i class="fas fa-tv"></i> Scientific Documentaries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Duke University</h3>
+                        <span class="tag">2025 – Present</span>
+                    </div>
+                    <p><strong>Master of Engineering in Computational Mechanics & Scientific Computing</strong></p>
+                    <ul>
+                        <li>Merit-based Graduate Scholarship Recipient.</li>
+                        <li>Focus: Numerical Linear Algebra, Machine Learning, Business Fundamentals.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Indian Institute of Technology, Bombay</h3>
+                        <span class="tag">2021 – 2025</span>
+                    </div>
+                    <p><strong>Bachelor of Technology in Civil Engineering</strong></p>
+                    <ul>
+                        <li>Ranked in Top 0.3% in JEE Mains and Top 2% in JEE Advanced.</li>
+                        <li>Undergraduate Research Assistant (Quant Finance).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quant">
+        <div class="container">
+            <h2 class="section-title">Quantitative Finance</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Options Pricing & Risk Engine</h3>
+                        <div><span class="tag">C++</span> <span class="tag">Python</span></div>
+                    </div>
+                    <p>High-performance derivatives pricing engine using Finite Difference Methods (Fully Implicit) to solve Black-Scholes PDEs.</p>
+                    <ul>
+                        <li>Computed 5 Greeks with &lt;-zsh.05 error vs benchmarks.</li>
+                        <li>Implemented Backward Euler for unconditional stability.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Deep Learning Options Solver</h3>
+                        <div><span class="tag">PyTorch</span> <span class="tag">PINN</span></div>
+                    </div>
+                    <p>Physics-Informed Neural Network (PINN) to solve Black-Scholes PDE for European options.</p>
+                    <ul>
+                        <li>Reduced inference time from 100ms (FDM) to 0.09ms.</li>
+                        <li>Achieved 0.93% median pricing error across 9,000 scenarios.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Portfolio Optimization Engine</h3>
+                        <div><span class="tag">Python</span> <span class="tag">Quant</span></div>
+                    </div>
+                    <p>Robust optimization engine implementing Ledoit-Wolf shrinkage and Hierarchical Risk Parity (HRP).</p>
+                    <ul>
+                        <li>Achieved 0.94 Sharpe Ratio in walk-forward backtests.</li>
+                        <li>Reduced portfolio turnover by 63.4% vs Mean-Variance.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data">
+        <div class="container">
+            <h2 class="section-title">Data Science & MLE</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Credit Risk Prediction</h3>
+                        <span class="tag">XGBoost</span>
+                    </div>
+                    <p>Ensemble credit risk model processing 150k loan records.</p>
+                    <ul>
+                        <li>Achieved 83% ROC-AUC accuracy.</li>
+                        <li>Handled 93:7 class imbalance using SMOTE.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Stock Sentiment Analysis</h3>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <p>Real-time pipeline integrating Yahoo Finance API with NLP sentiment analysis.</p>
+                    <ul>
+                        <li>Processed 1,000+ daily news articles for 50+ stocks.</li>
+                        <li>Correlated sentiment scores with price movements.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Chess Opening ROI Analyser</h3>
+                        <span class="tag">Python</span>
+                    </div>
+                    <p>Applied Modern Portfolio Theory (Sharpe Ratio, ROI) to analyze 1,000+ chess games.</p>
+                    <ul>
+                        <li>Calculated risk-adjusted returns for 8 different openings.</li>
+                        <li>Generated Efficient Frontier visualizations.</li>
+                    </ul>
+                    <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Honors & Activities</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header"><h3>National Examinations</h3></div>
+                    <ul>
+                        <li><strong>JEE Mains:</strong> Ranked in Top 0.3% nationwide (1M+ candidates).</li>
+                        <li><strong>JEE Advanced:</strong> Ranked in Top 2% (elite engineering entrance).</li>
+                        <li><strong>IMO:</strong> International Mathematics Olympiad Ranked Participant.</li>
+                    </ul>
+                </div>
                 
-                <h3 style="margin-top: 1.5rem; color: #e6edf3;">Interests & Hobbies</h3>
-                <ul class="hobbies-list">
-                    <li><i class="fas fa-chess-knight"></i> <strong>Chess:</strong> Competitive player, analyzing opening theories.</li>
-                    <li><i class="fas fa-cricket"></i> <strong>Cricket:</strong> Active player and fan.</li>
-                    <li><i class="fas fa-book"></i> <strong>Reading:</strong> Finance history and tech non-fiction.</li>
-                    <li><i class="fas fa-tv"></i> <strong>Documentaries:</strong> Exploring historical and scientific series.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="quant" class="projects">
-        <h2 class="section-title">Quantitative Finance & Engineering</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Options Pricing & Risk Engine</h3>
-                    <span class="tag cpp">C++</span> <span class="tag python">Python</span>
+                <div class="card">
+                    <div class="card-header"><h3>Leadership (IIT Bombay)</h3></div>
+                    <ul>
+                        <li><strong>Bronze Medal:</strong> Consecutive wins in Inter-hostel General Championship.</li>
+                        <li><strong>Chess Representative:</strong> Hostel 5 Chess General Championship.</li>
+                        <li><strong>Aavhaan 2024:</strong> Represented IIT Bombay in sports fest.</li>
+                    </ul>
                 </div>
-                <p>High-performance derivatives pricing engine using Finite Difference Methods (Fully Implicit) to solve Black-Scholes PDEs.</p>
-                <ul>
-                    <li>Computed 5 Greeks with &lt;-zsh.05 error vs benchmarks.</li>
-                    <li>Implemented Backward Euler for unconditional stability on barrier options.</li>
-                    <li>C++ core with PyBind11 wrapper and Streamlit dashboard.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h3>Deep Learning Options Solver (PINN)</h3>
-                    <span class="tag python">PyTorch</span> <span class="tag ml">Deep Learning</span>
+                <div class="card">
+                    <div class="card-header"><h3>Volunteering</h3></div>
+                    <ul>
+                        <li><strong>Environment:</strong> Forest Drive & Tree Plantation drives.</li>
+                        <li><strong>Certifications:</strong> Data Science with Python, SQL, Revit Architecture.</li>
+                    </ul>
                 </div>
-                <p>Physics-Informed Neural Network (PINN) to solve Black-Scholes PDE for European options.</p>
-                <ul>
-                    <li>Reduced inference time from 100ms (FDM) to 0.09ms.</li>
-                    <li>Achieved 0.93% median pricing error across 9,000 scenarios.</li>
-                    <li>Engineered unitless training framework for numerical stability.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3>Portfolio Optimization Engine</h3>
-                    <span class="tag python">Python</span> <span class="tag quant">Quant</span>
-                </div>
-                <p>Robust optimization engine implementing Ledoit-Wolf shrinkage and Hierarchical Risk Parity (HRP).</p>
-                <ul>
-                    <li>Achieved 0.94 Sharpe Ratio in walk-forward backtests (2018-2024).</li>
-                    <li>Reduced portfolio turnover by 63.4% vs Mean-Variance Optimization.</li>
-                    <li>Built interactive dashboard for real-time allocation analysis.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="data" class="projects" style="background-color: #0d1117;">
-        <h2 class="section-title">Data Science & Machine Learning</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Credit Risk Prediction Model</h3>
-                    <span class="tag ml">XGBoost</span> <span class="tag ml">sklearn</span>
-                </div>
-                <p>Ensemble credit risk model processing 150k loan records.</p>
-                <ul>
-                    <li>Achieved 83% ROC-AUC accuracy.</li>
-                    <li>Handled 93:7 class imbalance using SMOTE.</li>
-                    <li>Deployed Streamlit dashboard for real-time risk scoring.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3>Stock Sentiment Analysis</h3>
-                    <span class="tag python">NLP</span> <span class="tag ml">API</span>
-                </div>
-                <p>Real-time pipeline integrating Yahoo Finance API with NLP sentiment analysis.</p>
-                <ul>
-                    <li>Processed 1,000+ daily news articles for 50+ stocks.</li>
-                    <li>Correlated sentiment scores with price movements using ML classification.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3>CricMetrics Pro: IPL Analytics</h3>
-                    <span class="tag python">Pandas</span> <span class="tag vis">Visualization</span>
-                </div>
-                <p>Comprehensive analytics on 578 IPL matches (2016-2024).</p>
-                <ul>
-                    <li>Classified 400+ players using custom performance metrics.</li>
-                    <li>Enabled data-driven franchise investment decisions.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3>Chess Opening ROI Analyser</h3>
-                    <span class="tag python">Python</span> <span class="tag quant">Portfolio Theory</span>
-                </div>
-                <p>Applied Modern Portfolio Theory (Sharpe Ratio, ROI) to analyze 1,000+ chess games and openings.</p>
-                <ul>
-                    <li>Calculated risk-adjusted returns for 8 different openings.</li>
-                    <li>Generated Efficient Frontier visualizations for opening selection.</li>
-                </ul>
-                <a href="https://github.com/sohamgugale" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="achievements-section">
-        <h2 class="section-title">Honors, Extracurriculars & Volunteering</h2>
-        <div class="grid">
-            <div class="card achievement-card">
-                <div class="icon-box"><i class="fas fa-trophy"></i></div>
-                <h3>National Examinations</h3>
-                <ul>
-                    <li><strong>JEE Mains:</strong> Ranked in Top 0.3% nationwide (1M+ candidates).</li>
-                    <li><strong>JEE Advanced:</strong> Ranked in Top 2% (elite engineering entrance).</li>
-                    <li><strong>IMO (2017-18):</strong> International Mathematics Olympiad Ranked Participant.</li>
-                </ul>
-            </div>
-            
-            <div class="card achievement-card">
-                <div class="icon-box"><i class="fas fa-medal"></i></div>
-                <h3>Leadership (IIT Bombay)</h3>
-                <ul>
-                    <li><strong>Bronze Medal (2023-25):</strong> Consecutive wins in Inter-hostel General Championship (Hostel 5).</li>
-                    <li><strong>Chess Representative:</strong> Hostel 5 Chess General Championship (2024-25).</li>
-                    <li><strong>Aavhaan 2024:</strong> Represented IIT Bombay in sports fest.</li>
-                </ul>
-            </div>
-
-            <div class="card achievement-card">
-                <div class="icon-box"><i class="fas fa-hands-helping"></i></div>
-                <h3>Volunteering & Certifications</h3>
-                <ul>
-                    <li><strong>Environment:</strong> Forest Drive & Tree Plantation drives.</li>
-                    <li><strong>Certifications:</strong> Data Science with Python, SQL, Advanced Excel, Revit Architecture.</li>
-                </ul>
             </div>
         </div>
     </section>
