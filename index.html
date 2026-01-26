@@ -3,339 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Gugale | Computational Engineer & Data Scientist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Soham Gugale | Quant Developer & Data Scientist</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="brand-icon">SG</span>
-                <span class="brand-text">Soham Gugale</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+
+    <nav>
+        <div class="logo">SG.</div>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#quant">Quant Finance</a>
+            <a href="#data">Data Science</a>
+            <a href="#skills">Skills</a>
+            <a href="https://github.com/sohamgugale" target="_blank">GitHub</a>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">Available for Full-Time Opportunities</div>
-            <h1 class="hero-title">Soham Gugale</h1>
-            <h2 class="hero-subtitle">Computational Engineer • Data Scientist • Quantitative Analyst</h2>
-            <p class="hero-description">
-                Graduate student at Duke University specializing in machine learning, quantitative finance, 
-                and high-performance computing. Proven experience in deploying production ML systems, 
-                building interactive analytics dashboards, and optimizing financial portfolios through internships and research.
-            </p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Graduate Projects</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Research Internships</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100K+</div>
-                    <div class="stat-label">Records Analyzed</div>
-                </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Soham Gugale</h1>
+            <h2>Quantitative Developer | Data Scientist | MLE</h2>
+            <p>Master of Engineering at Duke University. Specializing in Options Pricing, Risk Analytics, and Numerical Methods.</p>
+            <div class="cta-buttons">
+                <a href="#quant" class="btn primary">View Quant Projects</a>
+                <a href="CV.pdf" class="btn secondary">Download Resume</a>
             </div>
-            <div class="hero-buttons">
-                <a href="mailto:sohamgugale170@gmail.com" class="btn btn-primary">
-                    <span>📧</span> Get In Touch
-                </a>
-                <a href="https://github.com/sohamgugale" target="_blank" class="btn btn-secondary">
-                    <span>💻</span> View GitHub
-                </a>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Durham, NC</span>
+                <span><i class="fas fa-envelope"></i> sohamgugale170@gmail.com</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="quant" class="projects">
+        <h2 class="section-title">Quantitative Finance & Engineering</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Options Pricing & Risk Engine</h3>
+                    <span class="tag cpp">C++</span> <span class="tag python">Python</span>
+                </div>
+                <p>High-performance derivatives pricing engine using Finite Difference Methods (Fully Implicit) to solve Black-Scholes PDEs.</p>
+                <ul>
+                    <li>Computed 5 Greeks with &lt;-zsh.05 error vs benchmarks.</li>
+                    <li>Implemented Backward Euler for unconditional stability on barrier options.</li>
+                    <li>C++ core with PyBind11 wrapper and Streamlit dashboard.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Deep Learning Options Solver (PINN)</h3>
+                    <span class="tag python">PyTorch</span> <span class="tag ml">Deep Learning</span>
+                </div>
+                <p>Physics-Informed Neural Network (PINN) to solve Black-Scholes PDE for European options.</p>
+                <ul>
+                    <li>Reduced inference time from 100ms (FDM) to 0.09ms.</li>
+                    <li>Achieved 0.93% median pricing error across 9,000 scenarios.</li>
+                    <li>Engineered unitless training framework for numerical stability.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Portfolio Optimization Engine</h3>
+                    <span class="tag python">Python</span> <span class="tag quant">Quant</span>
+                </div>
+                <p>Robust optimization engine implementing Ledoit-Wolf shrinkage and Hierarchical Risk Parity (HRP).</p>
+                <ul>
+                    <li>Achieved 0.94 Sharpe Ratio in walk-forward backtests (2018-2024).</li>
+                    <li>Reduced portfolio turnover by 63.4% vs Mean-Variance Optimization.</li>
+                    <li>Built interactive dashboard for real-time allocation analysis.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+             <div class="card">
+                <div class="card-header">
+                    <h3>Chess Opening ROI Analyser</h3>
+                    <span class="tag python">Python</span> <span class="tag quant">Portfolio Theory</span>
+                </div>
+                <p>Applied Modern Portfolio Theory (Sharpe Ratio, ROI) to analyze 1,000+ chess games and openings.</p>
+                <ul>
+                    <li>Calculated risk-adjusted returns for 8 different openings.</li>
+                    <li>Generated Efficient Frontier visualizations for opening selection.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Who I Am</span>
-                <h2 class="section-title">About Me</h2>
+    <section id="data" class="projects">
+        <h2 class="section-title">Data Science & Machine Learning</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Credit Risk Prediction Model</h3>
+                    <span class="tag ml">XGBoost</span> <span class="tag ml">sklearn</span>
+                </div>
+                <p>Ensemble credit risk model processing 150k loan records.</p>
+                <ul>
+                    <li>Achieved 83% ROC-AUC accuracy.</li>
+                    <li>Handled 93:7 class imbalance using SMOTE.</li>
+                    <li>Deployed Streamlit dashboard for real-time risk scoring.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I'm an analytical professional with proven internship experience in financial modeling, business intelligence, 
-                        and data-driven decision-making. Currently pursuing my Master of Engineering at Duke University, 
-                        I combine engineering rigor with cutting-edge data science.
-                    </p>
-                    <p>
-                        Through my internships and research work, I've built portfolio optimization systems using Modern Portfolio Theory, 
-                        real-time data pipelines processing 100+ daily API updates, and ML systems analyzing 100,000+ records. 
-                        I've delivered production dashboards driving 25% faster decision-making and built risk analytics engines for research applications.
-                    </p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Stock Sentiment Analysis</h3>
+                    <span class="tag python">NLP</span> <span class="tag ml">API</span>
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">🎓</div>
-                        <h4>Education</h4>
-                        <p>Duke University (MEng) • IIT Bombay (BTech)</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">🏆</div>
-                        <h4>Expertise</h4>
-                        <p>ML • Quant Finance • Data Analytics • HPC</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">🎯</div>
-                        <h4>Interests</h4>
-                        <p>Cricket • Chess • Financial Markets</p>
-                    </div>
+                <p>Real-time pipeline integrating Yahoo Finance API with NLP sentiment analysis.</p>
+                <ul>
+                    <li>Processed 1,000+ daily news articles for 50+ stocks.</li>
+                    <li>Correlated sentiment scores with price movements using ML classification.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>CricMetrics Pro: IPL Analytics</h3>
+                    <span class="tag python">Pandas</span> <span class="tag vis">Visualization</span>
                 </div>
+                <p>Comprehensive analytics on 578 IPL matches (2016-2024).</p>
+                <ul>
+                    <li>Classified 400+ players using custom performance metrics.</li>
+                    <li>Enabled data-driven franchise investment decisions.</li>
+                </ul>
+                <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">My Journey</span>
-                <h2 class="section-title">Internship & Research Experience</h2>
+    <section id="skills" class="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <p>C++ (PyBind11), Python, SQL, MATLAB, JavaScript</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Undergraduate Research Assistant</h3>
-                                <p class="company">🏛️ IIT Bombay, India</p>
-                            </div>
-                            <span class="date-badge">Aug 2024 – May 2025</span>
-                        </div>
-                        <ul class="experience-list">
-                            <li>Built Modern Portfolio Theory optimizer analyzing <strong>20+ stock portfolios</strong> using Markowitz framework</li>
-                            <li>Implemented risk engine calculating VaR, CVaR, Sharpe ratios across <strong>5-year datasets</strong></li>
-                            <li>Integrated real-time Yahoo Finance API processing <strong>100+ daily updates</strong></li>
-                            <li>Deployed Streamlit web app with efficient frontier visualizations</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Data Science Intern</h3>
-                                <p class="company">💼 KultureHire, Puducherry</p>
-                            </div>
-                            <span class="date-badge">May 2024 – Jul 2024</span>
-                        </div>
-                        <ul class="experience-list">
-                            <li>Designed 3 Power BI dashboards driving <strong>25% faster decisions</strong></li>
-                            <li>Analyzed <strong>5,000+ survey responses</strong> using advanced SQL (CTEs, window functions)</li>
-                            <li>Built ETL pipelines ensuring data quality for BI reporting</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header">
-                            <div>
-                                <h3>Research Intern - Decarbonization</h3>
-                                <p class="company">🔬 IIT Bombay | Prof. Ajay Deshpande</p>
-                            </div>
-                            <span class="date-badge">May 2023 – Jul 2023</span>
-                        </div>
-                        <ul class="experience-list">
-                            <li>Conducted lifecycle carbon assessment for <strong>6 infrastructure projects</strong></li>
-                            <li>Developed models estimating <strong>18-22% carbon reduction</strong></li>
-                            <li>Performed statistical analysis on sustainable material alternatives</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="skill-category">
+                <h3>Quant Finance</h3>
+                <p>Black-Scholes, Monte Carlo, Greeks, VaR/CVaR, Portfolio Optimization (HRP, Mean-Variance)</p>
+            </div>
+            <div class="skill-category">
+                <h3>Machine Learning</h3>
+                <p>PyTorch, XGBoost, Regression, Time Series (ARIMA/GARCH), PINNs</p>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <p>Git, Docker, Streamlit, Tableau, PowerBI, VSCode</p>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Academic Background</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="education-grid">
-                <div class="education-card duke">
-                    <div class="edu-icon">🎓</div>
-                    <h3>Duke University</h3>
-                    <p class="school">Pratt School of Engineering</p>
-                    <p class="degree">Master of Engineering</p>
-                    <p class="field">Computational Mechanics & Scientific Computing</p>
-                    <p class="duration">Aug 2025 - Dec 2026 • Durham, NC</p>
-                </div>
-                <div class="education-card iit">
-                    <div class="edu-icon">🏛️</div>
-                    <h3>Indian Institute of Technology, Bombay</h3>
-                    <p class="school">Department of Civil Engineering</p>
-                    <p class="degree">Bachelor of Technology</p>
-                    <p class="field">Civil Engineering</p>
-                    <p class="duration">Aug 2021 - May 2025 • Mumbai, India</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Tech Stack</span>
-                <h2 class="section-title">Technical Skills</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>SQL</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <h3>Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span>Deep Learning</span>
-                        <span>PyTorch</span>
-                        <span>CNNs</span>
-                        <span>NLP</span>
-                        <span>LLMs</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>Data Science</h3>
-                    <div class="skill-tags">
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Scikit-learn</span>
-                        <span>XGBoost</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📈</div>
-                    <h3>Quant Finance</h3>
-                    <div class="skill-tags">
-                        <span>Portfolio Optimization</span>
-                        <span>Risk Analytics</span>
-                        <span>Options Pricing</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Tools</h3>
-                    <div class="skill-tags">
-                        <span>Power BI</span>
-                        <span>Git</span>
-                        <span>Streamlit</span>
-                        <span>Jupyter</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Specializations</h3>
-                    <div class="skill-tags">
-                        <span>Financial Modeling</span>
-                        <span>Business Intelligence</span>
-                        <span>Sports Analytics</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What I've Built</span>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="ml">🤖 ML</button>
-                <button class="filter-btn" data-filter="quant">📈 Quant Finance</button>
-                <button class="filter-btn" data-filter="data">📊 Data Analytics</button>
-                <button class="filter-btn" data-filter="computation">⚡ HPC</button>
-            </div>
-            <div id="projectsGrid" class="projects-grid">
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>Loading projects...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-box">
-                <div class="section-header">
-                    <span class="section-label">Get In Touch</span>
-                    <h2 class="section-title">Let's Connect</h2>
-                </div>
-                <p class="contact-intro">
-                    I'm actively seeking full-time opportunities in data science, ML engineering, 
-                    and quantitative analysis. Let's build something amazing together.
-                </p>
-                <div class="contact-grid">
-                    <a href="mailto:sohamgugale170@gmail.com" class="contact-card">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>sohamgugale170@gmail.com</p>
-                        </div>
-                    </a>
-                    <a href="tel:+19196415666" class="contact-card">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>(919) 641-5666</p>
-                        </div>
-                    </a>
-                    <a href="https://github.com/sohamgugale" target="_blank" class="contact-card">
-                        <div class="contact-icon">💻</div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <p>github.com/sohamgugale</p>
-                        </div>
-                    </a>
-                    <a href="https://linkedin.com/in/sohamgugale" target="_blank" class="contact-card">
-                        <div class="contact-icon">🔗</div>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p>linkedin.com/in/sohamgugale</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Soham Gugale • Built with passion for innovation</p>
-            <p class="footer-note">Auto-updates daily from GitHub • Last updated: <span id="lastUpdate">Loading...</span></p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Soham Gugale. Built for Performance.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
